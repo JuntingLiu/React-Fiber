@@ -17,10 +17,14 @@ class Greating extends Component {
   render () {
     return (
       <div>
-        React Class Component
+        React Class Component - {this.props.title}
       </div>
     )
   }
 }
 
-render(<Greating />, root)
+function FnComponent (props) {
+  return <div>FnComponent - {this.props.title}</div>
+}
+
+render(<FnComponent title="Fiber! " />, root)
